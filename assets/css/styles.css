@@ -178,15 +178,15 @@ img{
     .nav__menu{
         position: fixed;
         bottom: -100%;
-        /*so以0是在最上面，-100%變成在最下面*/
-        /*但是為什麼我的還是在上面嗚嗚嗚*/
+        /*so以0是會pop up的樣子，-100%是消失不見(ㄇ?)*/
+        /*但是為什麼我的還是在上面嗚嗚嗚>>幹因為人家打錯headerㄌ...*/
         left: 0;
         width: 100%;
         background-color: var(--body-color);
         padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
         border-radius: 1.5rem 1.5rem 0 0;
-        transition: .3s;
+        transition: .8s;
     }
 }
 
@@ -225,9 +225,101 @@ img{
 .nav__close:hover{
     color: var(--first-color-alt);
 }
-/*-show menu*/
+/*--show menu*/
 .show-menu{
     bottom: 0;
 }
 
-/*-active link*/
+/*--active link*/
+
+/*--change bg header*/
+
+/*home*/
+.home__container{
+    gap: 1rem;
+}
+
+.home__content{
+    grid-template-columns: .5fr 3fr;
+    padding-top: 3.5rem;
+    align-items: center;
+}
+
+.home__social{
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+
+.home__social-icon{
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+
+.home__social-icon:hover{
+    color: var(--first-color-alt);
+}
+
+.home__blob{
+    width: 200px;
+    fill: var(--first-color);
+}
+
+.home__blob-img{
+    width: 450px;
+}
+
+.home__data{
+    grid-column: 1/3;
+}
+
+.home__title{
+    font-size: var(--big-font-size);
+}
+
+.home__subtitle{
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-75);
+}
+
+.home__description{
+    margin-bottom: var(--mb-2);
+}
+
+.home__scroll{
+    /*display: none;*/
+}
+
+.home__scroll-button{
+    color: var(--first-color);
+    transition: .3s;
+    /*這裡為啥要transition捏???*/
+}
+
+.home__scroll-button:hover{
+    transform: translateY(0.25rem);
+}
+
+.home__scroll-mouse{
+    font-size: 2rem;
+}
+
+.home__scroll-name{
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-right: var(--mb-0-25);
+}
+
+.home__scroll-arrow{
+    font-size: 1.25rem;
+}
+/*buttons*/
+
+/*about*/
+
+/*skills*/
+
+/*qualification*/
