@@ -79,7 +79,27 @@ tabs.forEach(tab =>{
     })
 })
 /*service modal*/  
+const modalViews = document.querySelectorAll(".services__modal"),
+      modalBtns = document.querySelectorAll(".services__button"),
+      modalClose = document.querySelectorAll(".services__modal-close")
 
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add("active-modal")
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener("click", () =>{
+        modal(i)
+    })
+})
+
+modalClose.forEach((modalClose) => {
+    modalClose.addEventListener("click", () =>{
+        modalViews.forEach((modalViews) =>{
+            modalViews.classList.remove("active-modal")
+        })
+    })
+})
 /*portfolio swiper*/
 
 /*testimonial*/
@@ -87,4 +107,8 @@ tabs.forEach(tab =>{
 /*scroll sections active link*/
 
 /*change background header*/
+
+/*show scroll top*/
+
+/*dark light theme*/
 
