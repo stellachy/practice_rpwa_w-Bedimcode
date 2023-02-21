@@ -100,8 +100,23 @@ modalClose.forEach((modalClose) => {
         })
     })
 })
-/*portfolio swiper*/
 
+/*portfolio swiper*/
+let swiper = new Swiper('.portfolio__container', {
+    /*窩不懂為什麼要把.swiper再替換成我們原本建好的class?因為那個不是兩個都可以找到那個標籤ㄇ*/
+    /*還有把var改成let，why???*/
+  cssMode: true,
+  loop: true,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 /*testimonial*/
 
 /*scroll sections active link*/
