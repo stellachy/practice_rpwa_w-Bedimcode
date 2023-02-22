@@ -102,8 +102,9 @@ modalClose.forEach((modalClose) => {
 })
 
 /*portfolio swiper*/
-let swiper = new Swiper('.portfolio__container', {
+let swiperPortfolio = new Swiper('.portfolio__container', {
     /*窩不懂為什麼要把.swiper再替換成我們原本建好的class?因為那個不是兩個都可以找到那個標籤ㄇ*/
+    /* 好我知道位什麼不只用swiperㄌ，因為有兩個的時候會不知道哪個要用哪ㄍ～ */
     /*還有把var改成let，why???*/
   cssMode: true,
   loop: true,
@@ -117,7 +118,25 @@ let swiper = new Swiper('.portfolio__container', {
     clickable: true,
   },
 });
+
 /*testimonial*/
+let swiperTestimonial = new Swiper('.testimonial__container', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 48,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+  /*這下面似乎是創造出有preview分頁的樣子，所以會讓這個地方一次出現兩個testimonial*/
+  breakpoints:{
+    568:{
+        slidesPerView: 2,
+    }
+  }
+});
 
 /*scroll sections active link*/
 
