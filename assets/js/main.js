@@ -130,13 +130,13 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
     clickable: true,
     dynamicBullets: true,
   },
-  /*這下面似乎是創造出有preview分頁的樣子，所以會讓這個地方一次出現兩個testimonial*/
-  /*我覺得一個就好比較好看ㄟ？
+  /*這下面似乎是創造出有preview分頁的樣子，所以會讓這個地方一次出現兩個testimonial
+  我覺得一個就好比較好看ㄟ？*/
   breakpoints:{
     568:{
         slidesPerView: 2,
     }
-  }*/
+  }
 });
 
 /*scroll sections active link*/
